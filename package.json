@@ -1,0 +1,36 @@
+{
+  "name": "hyperhire-bookstore-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "migrate:latest": "knex migrate:latest --knexfile=./knexfile.ts",
+    "migrate:rollback": "knex migrate:rollback --knexfile=./knexfile.ts",
+    "migrate:make": "knex migrate:make $1 --knexfile=./knexfile.ts",
+    "seed:make": "knex seed:make $1 --knexfile=./knexfile.ts",
+    "seed:plant": "knex seed:run $1 --knexfile=./knexfile.ts"
+  },
+  "author": "Imanuel Pundoko",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "lodash": "^4.17.21",
+    "pg": "^8.11.3",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
+  }
+}
